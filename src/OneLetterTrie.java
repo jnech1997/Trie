@@ -7,7 +7,7 @@ public class OneLetterTrie {
 	/**Constructor: 
 	 * Precondition: this OneWordTrie has exactly one root letter (char a-z)
 	 * Ex: this OneLetterTrie can only contain words that start with B
-	 * 			b
+	 *          b
 	 * 		   / \
 	 * 		  i   o
 	 * 		 /     \
