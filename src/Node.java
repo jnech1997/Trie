@@ -9,7 +9,8 @@ public class Node {
 		
 	}
 	
-	/** Constructor: create a Node with Character value @c */
+	/** Constructor: create a Node with Character value @c 
+	 * Pre: c is a Character a-z*/
 	public Node(Character c) {
 		value = c;
 	}

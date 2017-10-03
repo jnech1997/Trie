@@ -17,16 +17,16 @@ public class Trie {
 	 * pointers for each of the 26 letters of the English alphabet."
 	 * For example, given the String words cats, 
 	 * cap, bar, and bat, the Trie would look like this:
-	 *              C  B
+	 *              c  b
 	 *             /    \
-	 *            A      A
+	 *            a      a
 	 *           / \    / \
-	 *          T   P  T   R
+	 *          t   p  t   r
 	 *         /
-	 *        S
+	 *        s
 	 *  Notice that it's made of two OneLetterTrie's: one that contains
-	 *  words that start with C, and one that contains with words
-	 *  that start with B
+	 *  words that start with c, and one that contains with words
+	 *  that start with b
 	 *  */
 	
 	/**Constructor: */
@@ -61,7 +61,7 @@ public class Trie {
 	
 	/**Return true if this Trie already contains 
 	 * the word @word. Pre: @word is a string of 
-	 * character a-z*/
+	 * Characters a-z*/
 	public boolean trieContainsWord(String word) {
 		for (OneLetterTrie singleTrie : roots) {
 			if (singleTrie.containsWord(word)) {
