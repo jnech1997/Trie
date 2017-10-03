@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class OneLetterTrie {
 	Node root = new Node();
 	ArrayList<OneLetterTrie> children = new ArrayList<OneLetterTrie>();
-	
+
 	/**Constructor: 
 	 * Precondition: this OneWordTrie has exactly one root letter (Character a-z)
 	 * Ex: this OneLetterTrie can only contain words that start with B
@@ -15,9 +15,9 @@ public class OneLetterTrie {
 	 * 
 	 *  */
 	public OneLetterTrie() {
-		
+
 	}
-	
+
 	/**Initialize a OneLetterTrie whose root value is @c 
 	 * Pre: @c is a Character a-z*/
 	public OneLetterTrie(Character c) {
@@ -47,7 +47,7 @@ public class OneLetterTrie {
 			}
 		}
 	}
- 	
+
 	/**Add string @word to this OneLetterTrie.
 	 * Pre: @word is a string of 
 	 * Characters a-z*/
@@ -90,7 +90,7 @@ public class OneLetterTrie {
 			//System.out.println("tried adding a zero length word");
 		}
 	}
-	
+
 	/** Return true if this OneLetterTrie contains the string @w
 	 * Pre: w is a word string with length greater than 0 */
 	public boolean containsWord(String w) {
@@ -107,44 +107,44 @@ public class OneLetterTrie {
 		}
 		return false;
 	}
-	
+
 	/**Get the parent OneLetterTrie of this OneLetterTrie. 
 	 * Currently unused method. */
 	public OneLetterTrie getParent(OneLetterTrie c) {
-        // Base case
-        for (OneLetterTrie dt : children) {
-            if (dt.root == c.root) return this;
-        }
-        // Recursive case - ask children to look
-        for (OneLetterTrie dt : children) {
-            OneLetterTrie parent= dt.getParent(c);
-            if (parent != null) return parent;
-        }
-        return null; //Not found
-    }
-	
-	 /*** Return the depth at which Node n occurs in this OneLetterTrie, or -1
-     * if n is not in the OneLetterTrie .
-     * Note: depthOf(root) is 0.
-     * If n is a child of this OneLetterTrie, then depth(n) is 1. etc.
-     * Currently unused method. */
-    public int depthOf(Node n) {
-        if (n == root) {return 0;}
-        for (OneLetterTrie bt : children) {
-        	int d= 1 + bt.depthOf(n);
-        	if (d != 0) {return d;}
-        }
-        return -1;
-    }
-	
+		// Base case
+		for (OneLetterTrie dt : children) {
+			if (dt.root == c.root) return this;
+		}
+		// Recursive case - ask children to look
+		for (OneLetterTrie dt : children) {
+			OneLetterTrie parent= dt.getParent(c);
+			if (parent != null) return parent;
+		}
+		return null; //Not found
+	}
+
+	/*** Return the depth at which Node n occurs in this OneLetterTrie, or -1
+	 * if n is not in the OneLetterTrie .
+	 * Note: depthOf(root) is 0.
+	 * If n is a child of this OneLetterTrie, then depth(n) is 1. etc.
+	 * Currently unused method. */
+	public int depthOf(Node n) {
+		if (n == root) {return 0;}
+		for (OneLetterTrie bt : children) {
+			int d= 1 + bt.depthOf(n);
+			if (d != 0) {return d;}
+		}
+		return -1;
+	}
+
 	/**Return the number of levels in this OneLetterTrie.
 	 * Currently unused method. */
 	public int maxDepth() {
 		int maxDepth= 0;
-        for (OneLetterTrie child : children) {
-            maxDepth = Math.max(maxDepth, 1 + child.maxDepth());
-        }
-        return maxDepth;
+		for (OneLetterTrie child : children) {
+			maxDepth = Math.max(maxDepth, 1 + child.maxDepth());
+		}
+		return maxDepth;
 	}
 
 	/** MAIN FUNCTION for debugging and printing*/

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Trie {
 	ArrayList<OneLetterTrie> roots = new ArrayList<OneLetterTrie>();
-	
+
 	/** 
 	 * Description taken from:
 	 * https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/tutorial/
@@ -28,12 +28,12 @@ public class Trie {
 	 *  words that start with c, and one that contains with words
 	 *  that start with b
 	 *  */
-	
+
 	/**Constructor: */
 	public Trie() {
-		
+
 	}
-	
+
 	/**Add the words in this string array to this Trie. 
 	 * Pre: each words in @words is a string of Characters
 	 * a-z */
@@ -43,7 +43,7 @@ public class Trie {
 			OneLetterTrie.addWord(s, wordTrie);
 		}
 	}
-	
+
 	/**Return the OneWordTrie which contains words that
 	 * begin with the Character @c if one exists, else
 	 * add a new OneWordTrie to this Trie with @c (Characrer a-z)
@@ -56,9 +56,9 @@ public class Trie {
 		}
 		OneLetterTrie toAdd = new OneLetterTrie(c);
 		roots.add(toAdd);
-;		return toAdd;
+		;		return toAdd;
 	}
-	
+
 	/**Return true if this Trie already contains 
 	 * the word @word. Pre: @word is a string of 
 	 * Characters a-z*/
@@ -70,7 +70,7 @@ public class Trie {
 		}
 		return false;
 	}
-	
+
 	/** MAIN FUNCTION for debugging and printing*/
 	public static void main(String[] args) {
 		Trie multiTrie = new Trie();
