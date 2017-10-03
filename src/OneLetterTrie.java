@@ -8,10 +8,10 @@ public class OneLetterTrie {
 	 * Precondition: this OneWordTrie has exactly one root letter (char a-z)
 	 * Ex: this OneLetterTrie can only contain words that start with B
 	 *          b
-	 * 		   / \
-	 * 		  i   o
-	 * 		 /     \
-	 * 		g       b
+	 *         / \
+	 *        i   o
+	 *       /     \
+	 *      g       b
 	 * 
 	 *  */
 	public OneLetterTrie() {
