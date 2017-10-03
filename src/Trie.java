@@ -17,10 +17,10 @@ public class Trie {
 	 * pointers for each of the 26 letters of the English alphabet."
 	 * For example, given the String words cats, 
 	 * cap, bar, and bat, the Trie would look like this:
-	 * 				C  B
-	 *  		   / 	\
-	 *  		  A		 A
-	 *  		 / \	/ \
+	 *              C  B
+	 *             /    \
+	 *  		  A	     A
+	 *  		 / \    / \
 	 *  		T   P  R   T
 	 *  	   /
 	 *  	  S
