@@ -19,11 +19,11 @@ public class Trie {
 	 * cap, bar, and bat, the Trie would look like this:
 	 *              C  B
 	 *             /    \
-	 *  		  A	     A
-	 *  		 / \    / \
-	 *  		T   P  R   T
-	 *  	   /
-	 *  	  S
+	 *            A      A
+	 *           / \    / \
+	 *          T   P  T   R
+	 *         /
+	 *        S
 	 *  Notice that it's made of two OneLetterTrie's: one that contains
 	 *  words that start with C, and one that contains with words
 	 *  that start with B
