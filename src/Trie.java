@@ -40,7 +40,7 @@ public class Trie {
 	public void addWords(String[] words) {
 		for (String s : words) {
 			OneLetterTrie wordTrie = trieWithLetter(s.charAt(0));
-			OneLetterTrie.addWord(s, wordTrie);
+			OneLetterTrie.addWord(s.substring(1), wordTrie);
 		}
 	}
 
@@ -56,13 +56,13 @@ public class Trie {
 		}
 		OneLetterTrie toAdd = new OneLetterTrie(c);
 		roots.add(toAdd);
-		;		return toAdd;
+		return toAdd;
 	}
 
 	/**Return true if this Trie already contains 
 	 * the word @word. Pre: @word is a string of 
 	 * Characters a-z*/
-	public boolean trieContainsWord(String word) {
+	public boolean containsWord(String word) {
 		for (OneLetterTrie singleTrie : roots) {
 			if (singleTrie.containsWord(word)) {
 				return true;
@@ -74,11 +74,11 @@ public class Trie {
 	/** MAIN FUNCTION for debugging and printing*/
 	public static void main(String[] args) {
 		Trie multiTrie = new Trie();
-		String[] wordList = new String[]{"cat", "captain", "coup", "bat", "butter","zaboomafoo"};
+		String[] wordList = new String[]{"aap", "captain", "coup", "bat", "butter","zaboomafoo"};
 		multiTrie.addWords(wordList);
-		boolean contains0 = multiTrie.trieContainsWord("c");
-		boolean contains1 = multiTrie.trieContainsWord("zaboom");
-		boolean contains2 = multiTrie.trieContainsWord("butter");
+		boolean contains0 = multiTrie.containsWord("aap");
+		boolean contains1 = multiTrie.containsWord("zaboomafoo");
+		boolean contains2 = multiTrie.containsWord("butter");
 		System.out.println(contains0);
 		System.out.println(contains1);
 		System.out.println(contains2);

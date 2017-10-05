@@ -31,7 +31,8 @@ public class OneLetterTrie {
 			t.root.value = c;
 		}
 		else {
-			if (t.root.value != c) {	
+			//root is not null
+			//if (t.root.value != c) {	
 				boolean containsChar = false;
 				for (OneLetterTrie child : t.children) {
 					if (child.root.value == c) {
@@ -41,10 +42,12 @@ public class OneLetterTrie {
 				if (!containsChar) {
 					t.children.add(new OneLetterTrie(c));
 				}
-			}
-			else {
-				//System.out.println("You tried to add another start letter");
-			}
+			//}
+			//else {
+				/*tried adding the letter 'a' to a OneLetterTrie
+				whose root is 'a'*/
+				
+			//}
 		}
 	}
 
@@ -82,7 +85,7 @@ public class OneLetterTrie {
 						addWord(sub,container);
 					}
 				}
-			} catch (ArrayIndexOutOfBoundsException e) {
+			} catch (IndexOutOfBoundsException e) {
 				//System.out.println("tried to access a substring that doesn't exist");
 			}
 		}
