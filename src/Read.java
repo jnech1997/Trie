@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Read {
 
 	/**Compare the time for searching through the trie vs. searching
-	 * through an arraylist */
+	 * through an arraylist after processing a text file of ~84,000 entries*/
 	public static void main(String[] args) throws IOException {
 		long startTrie = System.nanoTime();
 		Trie t = processInput("src/trieInput.txt");
