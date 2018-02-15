@@ -12,13 +12,13 @@ public class Read {
 		ArrayList<String> l = processInputList("src/trieInput.txt");
 		System.out.println("Time for making the List: " + (System.nanoTime() - startList));
 		long startContainsTrie = System.nanoTime();
-		boolean containsT = t.containsWord("zymurgy");
+		boolean containsT = t.containsWord("adulators");
 		System.out.println("Time for checking contained in Trie: " + (System.nanoTime() - startContainsTrie));
 		long startContainsList = System.nanoTime();
-		boolean containsL = l.contains("zymurgy");
+		boolean containsL = l.contains("adulators");
 		System.out.println("Time for checking contained in List: " + (System.nanoTime() - startContainsList));
-		System.out.println("The Trie contains" + containsT);
-		System.out.println("The ArrayList contains" + containsL);
+		System.out.println("The Trie contains the word: " + containsT);
+		System.out.println("The ArrayList contains the word: " + containsL);
 	}
 	
 	/**Process the input text file by creating a List of its entries */

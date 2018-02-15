@@ -35,7 +35,7 @@ public class Trie {
 	}
 
 	/**Add the words in this string array to this Trie. 
-	 * Pre: each words in @words is a string of Characters
+	 * Pre: each word in @words is a string of Characters
 	 * a-z */
 	public void addWords(String[] words) {
 		for (String s : words) {
